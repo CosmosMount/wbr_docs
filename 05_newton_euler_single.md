@@ -185,8 +185,7 @@ I_{b}\ddot{\theta}_{b}=-\tau_{l}+m_{b}gd_{b}\theta_{b}-m_{b}\ddot{x}-m_{b}l\ddot
 ```math
 \begin{aligned}
 F_{w}^{v} & =F_{l}^{v}+m_{l}(a_{l}^{v}+g)=m_{b}(a_{b}^{v}+g)+m_{l}(a_{l}^{v}+g) \\\\
- & = m_{b}(-l\sin \theta_{l}\ddot{\theta}_{l}-l\cos \theta_{l}\dot{\theta}_{l}^{2}+g)+m_{l}(-l_{w}\sin \theta_{l}\ddot{\theta}_{l}-l_{w}\cos \theta_{l}\dot{\theta}_{l}^{2}+g) \\\\
- & =(m_{b}+m_{l})(-l_{w}\sin \theta_{l}\ddot{\theta}_{l}-l_{w}\cos \theta_{l}\dot{\theta}_{l}^{2}+g)+m_{b}(-l_{b}\sin \theta_{l}\ddot{\theta}_{l}-l_{b}\cos \theta_{l}\dot{\theta}_{l}^{2})
+ & = m_{b}(-l\sin \theta_{l}\ddot{\theta}_{l}-l\cos \theta_{l}\dot{\theta}_{l}^{2}+g)+m_{l}(-l_{w}\sin \theta_{l}\ddot{\theta}_{l}-l_{w}\cos \theta_{l}\dot{\theta}_{l}^{2}+g) 
 \end{aligned}
 ```
 ```math
@@ -195,12 +194,11 @@ F_{w}^{h}=f-m_{w}a_{w}^{h}= \frac{\tau_{w}-I_{w} \ddot{\theta}_{w}}{R_{w}}-m_{w}
 得到
 ```math
 \begin{aligned}
-I_{l} \ddot{\theta}_{l} & =\tau_{l}-\tau_{w} \\\\
- & +l_{w}\cos \theta_{l}\Big( (m_{b}+m_{l})(-l_{w}\sin \theta_{l}\ddot{\theta}_{l}-l_{w}\cos \theta_{l}\dot{\theta}_{l}^{2}+g) \\\\
- & \quad +m_{b}(-l_{b}\sin \theta_{l}\ddot{\theta}_{l}-l_{b}\cos \theta_{l}\dot{\theta}_{l}^{2}+g) \Big) \\\\
- & +m_{b}l_{b}\sin \theta_{l}(-l\sin \theta_{l}\ddot{\theta}_{l}-l\cos \theta_{l}\dot{\theta}_{l}^{2}+g) \\\\
- & -l_{w}\cos \theta_{l}(\frac{\tau_{w}-I_{w} \ddot{\theta}_{w}}{R_{w}}-m_{w}\ddot{x}) \\\\
- & -m_{b}l_{w}\cos \theta_{l}(\ddot{x}+l\cos \theta_{l}\ddot{\theta}_{l}-l\sin \theta_{l}\dot{\theta}_{l}^{2})
+I_{l} \ddot{\theta}_{l} & =\tau_{l}-\tau_{w} \\
+ & +m_{b}l\sin \theta_{l}(-l\sin \theta_{l}\ddot{\theta_{l}}-l\cos \theta_{l}\dot{\theta}_{l}^{2}+g) \\
+ & +m_{l}l_{w}\sin \theta_{l}(-l_{w}\sin \theta_{l}\ddot{\theta_{l}}-l_{w}\cos \theta_{l}\dot{\theta}_{l}^{2}+g) \\
+ & -l_{w}\cos \theta_{l}(\frac{\tau_{w}-I_{w} \ddot{\theta}_{w}}{R_{w}}-m_{w}\ddot{x}) \\
+ & -m_{b}l_{w}\cos \theta_{l}(\ddot{x}+l\cos \theta_{l}\ddot{\theta_{l}}-l\sin \theta_{l}\dot{\theta}_{l}^{2})
 \end{aligned}
 ```
 
