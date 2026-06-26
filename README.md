@@ -11,7 +11,7 @@
 | [01_introduction.md](01_introduction.md) | 系统概述、控制层级、坐标与正方向约定 |
 | [02_theoretical_mechanics.md](02_theoretical_mechanics.md) | 约束、广义坐标、拉格朗日方程等理论力学基础 |
 | [03_control_theory.md](03_control_theory.md) | LQR 相关控制理论基础 |
-| [04_vmc.md](04_vmc.md) | 五连杆 / 并联 / 偏置并联 VMC，足端力到关节力矩映射 |
+| [04_vmc.md](04_vmc.md) | 五连杆 / 偏置并联 VMC，足端力到关节力矩映射 |
 | [05_newton_euler_single.md](05_newton_euler_single.md) | **单腿**牛顿-欧拉建模（双腿合并） |
 | [06_newton_euler_dual.md](06_newton_euler_dual.md) | **双腿**牛顿-欧拉建模（含 yaw 状态） |
 | [07_newton_euler_dual_with_offset.md](07_newton_euler_dual_with_offset.md) | **双腿质心偏移**建模（参考转轴、显式平衡点） |
@@ -38,7 +38,7 @@ code/
 │       └── fit.m
 └── vmc/
     ├── vmc_serial.hpp        # 串联腿 VMC（见 04_vmc.md）
-    └── vmc_parallel.hpp      # 偏置并联 VMC（见 04_vmc.md §偏置并联VMC）
+    └── vmc_parallel.hpp      # 偏置并联 VMC（见 04_vmc.md）
 ```
 
 ### 建模代码（`code/modeling/`）
@@ -65,9 +65,9 @@ code/
 
 | 模型 | 状态维 | 输入 | 文档 |
 |------|--------|------|------|
-| [`single`](code/moodeling/single) | 6：`[x, ẋ, θ_l, θ̇_l, θ_b, θ̇_b]` | `[τ_w, τ_l]` | [05](05_newton_euler_single.md) |
-| [`dual`](code/moodeling/dual) | 10：含 `φ` 与左右腿 | `[τ_wl, τ_wr, τ_ll, τ_lr]` | [06](06_newton_euler_dual.md) |
-| [`dual_offset`](code/moodeling/dual_offset) | 10：同 `dual` | 同 `dual` | [07](07_newton_euler_dual_with_offset.md) |
+| `single` | 6：`[x, ẋ, θ_l, θ̇_l, θ_b, θ̇_b]` | `[τ_w, τ_l]` | [05](05_newton_euler_single.md) |
+| `dual` | 10：含 `φ` 与左右腿 | `[τ_wl, τ_wr, τ_ll, τ_lr]` | [06](06_newton_euler_dual.md) |
+| `dual_offset` | 10：同 `dual` | 同 `dual` | [07](07_newton_euler_dual_with_offset.md) |
 
 共享物理常数见 [`code/modeling/params.m`](code/modeling/params.m)。如果希望对比两套参数差异，可以使用 [`code/modeling/comparison.html`](code/modeling/comparison.html)
 
@@ -105,11 +105,11 @@ run('fit.m')
 ```
 01 概论 → 02 理论力学（按需） → 03 控制理论（按需）
     ↓
+04 VMC → code/vmc/*.hpp
+    ↓
 05 单腿 → 06 双腿 → 07 质心偏移
     ↓
 code/modeling/*/model.m 对照文档公式
-    ↓
-04 VMC → code/vmc/*.hpp
     ↓
 fit.m 生成部署用增益表
 ```
