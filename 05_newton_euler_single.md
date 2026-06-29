@@ -71,7 +71,7 @@ I_{w} \ddot{\theta}_{w}=\tau_{w}-fR_{w}
 ```
 加速度
 ```math
-a_{l}^{h}=a_{w}^{h}+\frac{ \partial ^2 }{ \partial t } (l_{w}\sin \theta_{l}) \\\\
+a_{l}^{h}=a_{w}^{h}+\frac{ \partial ^2 }{ \partial t } (l_{w}\sin \theta_{l}) \\
 =\ddot{x}+l_{w}\cos \theta_{l}\ddot{\theta}_{l}-l_{w}\sin \theta_{l}\dot{\theta}_{l}^{2}
 ```
 ```math
@@ -107,28 +107,28 @@ I_{b} \ddot{\theta}_{b}=-\tau_{l}+F_{l}^{v}d_{b}\sin \theta_{b}-F_{l}^{h}d_{b}\c
 我们需要
 ```math
 x=\left[ \begin{matrix}
-x \\\\
-\dot{x} \\\\
-\theta_{l} \\\\
-\dot{\theta}_{l} \\\\
-\theta_{b} \\\\
-\dot{\theta}_{b} \\\\
+x \\
+\dot{x} \\
+\theta_{l} \\
+\dot{\theta}_{l} \\
+\theta_{b} \\
+\dot{\theta}_{b}
 \end{matrix}
- \right] \\\\
- , \\\\
+ \right]
+ ,
  \dot{x}=\left[ \begin{matrix}
-\dot{x} \\\\
-\ddot{x} \\\\
-\dot{\theta}_{l} \\\\
-\ddot{\theta}_{l} \\\\
-\dot{\theta}_{b} \\\\
-\ddot{\theta}_{b} \\\\
+\dot{x} \\
+\ddot{x} \\
+\dot{\theta}_{l} \\
+\ddot{\theta}_{l} \\
+\dot{\theta}_{b} \\
+\ddot{\theta}_{b}
 \end{matrix}
- \right] \\\\
- , \\\\
+ \right]
+ ,
   u=\left[ \begin{matrix}
-\tau_{w} \\\\
-\tau_{l} \\\\
+\tau_{w} \\
+\tau_{l}
 \end{matrix}
  \right]
 ```
@@ -142,8 +142,8 @@ x \\\\
 
 ```math
 \begin{aligned}
-f & =m_{w}a_{w}^{h}+m_{l}a_{l}^{h}+m_{b}a_{b}^{h} \\\\
- & =m_{w}\ddot{x}+m_{l}(\ddot{x}+l_{w}\cos \theta_{l}\ddot{\theta}_{l}-l_{w}\sin \theta_{l}\dot{\theta}_{l}^{2})+m_{b}(\ddot{x}+l\cos \theta_{l}\ddot{\theta}_{l}-l\sin \theta_{l}\dot{\theta}_{l}^{2}) \\\\
+f & =m_{w}a_{w}^{h}+m_{l}a_{l}^{h}+m_{b}a_{b}^{h} \\
+ & =m_{w}\ddot{x}+m_{l}(\ddot{x}+l_{w}\cos \theta_{l}\ddot{\theta}_{l}-l_{w}\sin \theta_{l}\dot{\theta}_{l}^{2})+m_{b}(\ddot{x}+l\cos \theta_{l}\ddot{\theta}_{l}-l\sin \theta_{l}\dot{\theta}_{l}^{2}) \\
   & =(m_{w}+m_{l}+m_{b})\ddot{x}+(m_{l}+m_{b})(l_{w}\cos \theta_{l}\ddot{\theta}_{l}-l_{w}\sin \theta_{l}\dot{\theta}_{l}^{2})+m_{b}(l_{b}\cos \theta_{l}\ddot{\theta}_{l}-l_{b}\sin \theta_{l}\dot{\theta}_{l}^{2})
 \end{aligned}
 ```
@@ -161,8 +161,8 @@ f=\frac{\tau_{w}-I_{w}\ddot{\theta}_{w}}{R_{w}}=\frac{\tau_{w}}{R_{w}}-\frac{I_{
 
 ```math
 \begin{aligned}
-I_{b} \ddot{\theta}_{b} & =-\tau_{l}+F_{l}^{v}d_{b}\sin \theta_{b}-F_{l}^{h}d_{b}\cos \theta_{b} \\\\
- & =-\tau_{l}+m_{b}(a_{l}^{v}+g)d_{b}\sin \theta_{b}-m_{b}a_{l}^{h}d_{b}\cos \theta_{b} \\\\
+I_{b} \ddot{\theta}_{b} & =-\tau_{l}+F_{l}^{v}d_{b}\sin \theta_{b}-F_{l}^{h}d_{b}\cos \theta_{b} \\
+ & =-\tau_{l}+m_{b}(a_{l}^{v}+g)d_{b}\sin \theta_{b}-m_{b}a_{l}^{h}d_{b}\cos \theta_{b} \\
  & =-\tau_{l}+m_{b}(-l\sin \theta_{l}\ddot{\theta}_{l}-l\cos \theta_{l}\dot{\theta}_{l}^{2}+g)d_{b}\sin \theta_{b}-m_{b}(\ddot{x}+l\cos \theta_{l}\ddot{\theta}_{l}-l\sin \theta_{l}\dot{\theta}_{l}^{2})\cos \theta_{b}
 \end{aligned}
 ```
@@ -172,7 +172,7 @@ I_{b} \ddot{\theta}_{b} & =-\tau_{l}+F_{l}^{v}d_{b}\sin \theta_{b}-F_{l}^{h}d_{b
 
 ```math
 \begin{aligned}
-F_{w}^{v} & =F_{l}^{v}+m_{l}(a_{l}^{v}+g)=m_{b}(a_{b}^{v}+g)+m_{l}(a_{l}^{v}+g) \\\\
+F_{w}^{v} & =F_{l}^{v}+m_{l}(a_{l}^{v}+g)=m_{b}(a_{b}^{v}+g)+m_{l}(a_{l}^{v}+g) \\
  & = m_{b}(-l\sin \theta_{l}\ddot{\theta}_{l}-l\cos \theta_{l}\dot{\theta}_{l}^{2}+g)+m_{l}(-l_{w}\sin \theta_{l}\ddot{\theta}_{l}-l_{w}\cos \theta_{l}\dot{\theta}_{l}^{2}+g) 
 \end{aligned}
 ```
